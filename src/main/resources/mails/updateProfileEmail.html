@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="#{email.updation.title}">Giftzzel Account Profile Updation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="shortcut icon" th:href="@{|${baseUrl}/favicon.ico|}"/>
+</head>
+<body>
+<p th:text="#{email.activation.greeting(${user.login})}">
+    Dear
+</p>
+<p th:text="#{email.updation.text1}">
+    Your Giftzzel account profile has been updated, please click on the URL below to access it:
+</p>
+<p>
+    <a th:href="@{|${baseUrl}/#/|}"
+       th:text="@{|${baseUrl}/#/|}">Login link</a>
+</p>
+<p>
+    <span th:text="#{email.activation.text2}">Regards, </span>
+    <br/>
+    <em th:text="#{email.signature}">Giftzzel.</em>
+</p>
+</body>
+</html>
